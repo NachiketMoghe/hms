@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Health Monitoring System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+  </head>
+
+  <body class="w3-black">
+
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <img src="https://t3.ftcdn.net/jpg/04/91/18/32/360_F_491183220_ZVmDBZevyjFKwvsWkGpp2mjSm63bgl0W.jpg" style="width:100%">
+      
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+      </a>
+
+      <a href="#login" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>LOGIN</p>
+      </a>
+        
+      <a href="#manual" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-download w3-xxlarge"></i>
+        <p>MANUAL</p>
+      </a>
+        
+      </a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>CONTACT</p>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="#main" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+        <a href="#login" class="w3-bar-item w3-button" style="width:25% !important">LOGIN</a>
+        <a href="#manual" class="w3-bar-item w3-button" style="width:25% !important">MANUAL</a>
+        <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+      <!-- Header/Home -->
+      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+        <h1 class="w3-jumbo">Health Monitoring System</h1>
+    </div>
+
+    <!-- About Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="about">
+      <h2 class="w3-text-light-grey">About HMS</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <p>Accidents occur in factories and industries caused by unfit workers- either suffering from health issues or abusing substances (alcohol). 
+        Along with the loss of human lives, factory owners also have to suffer from financial loss and the consequences that come with death of a 
+        worker. The blame falls on both the workers involved and the company. The workers may not be able to afford sick leaves or might be careless 
+        enough to work under the influence. And the company is to blame here due to lack of infrastructure to monitor the workers. The aim is to 
+        develop an independent, reliable and easy to use IoT based Health Monitoring System which measures essential health parameters like Blood 
+        Oxygen ( SpO2 ), Alcohol level and Body Temperature
+      </p>
+    </div>
+    <!-- End About Section -->
+      
+    <!-- Login Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="login">
+      <h2 class="w3-text-light-grey">Login</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <form action="/login" method="POST">
+        <p>
+          <input class="w3-input w3-padding-16" type="text" name="username" placeholder="Username" required >
+        </p>
+          
+        <p>
+        <input class="w3-input w3-padding-16" type="password" placeholder="Password" required name="password">
+        </p>
+        
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">LOGIN</button>
+        </p>
+      </form>
+    </div>
+    <!-- End Login Section -->
+
+    <!-- Portfolio Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="manual">
+      <h2 class="w3-text-light-grey">Manual</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <p> To learn more about the product, download the official user manual by clicking on the button given below:</p>
+      <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Manual
+      </button>
+    </div>
+    <!-- End Portfolio Section -->
+
+    <!-- Contact Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+      <h2 class="w3-text-light-grey">Contact Us</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Mumbai, India</p>
+        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +91 9152687334</p>
+         <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: vineet.gadiyar@somaiya.edu</p>
+      </div><br>
+      <p>Let's get in touch. Send us a message:</p>
+
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+    <!-- End Contact Section -->
+    </div>
+
+    <!-- END PAGE CONTENT -->
+
+  </body>
+</html>
+    

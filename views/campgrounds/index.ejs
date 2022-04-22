@@ -1,0 +1,90 @@
+<%- include('../partials/header') -%>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Health Monitoring System</title>
+    <meta charset="UTF-8">
+<style>
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+</head>
+<body style="background-color: black">
+
+
+<p style="color:white;">
+Current Shift Details:
+</p>
+
+<p style="color:white;">
+Location: Plot Number 2, Hari Om Nagar, Mulund(East), Mumbai
+</p>
+
+<p style="color:white;">
+Shift Leader: Mr. Jenil Gosar
+</p>
+
+<p style="color:white;">
+Contact Information: + 91 9756723819
+</p>
+
+<p style="color:white;">
+Shift Employees:
+</p>
+
+<table>
+    <tr style="color:white;">
+        <th>Employee Name</th>
+        <th>Employee ID</th>
+      <th>Employee Contact</th>
+      </tr>
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campgrounds){ %>
+        <tr style="color:white;">
+            <th><a href="/campgrounds/<%= campgrounds._id %>" class="btn btn-primary"><%= campgrounds.name %></a></th>
+            <th><%= campgrounds.rollno %></th>
+        <th><%= campgrounds.description %></th>
+        </tr>
+    </div>
+    <% });%>                  
+
+    <!-- <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campgrounds){ %>
+        <tr style="color:white;">
+            <th><a href="/campgrounds/<%= campgrounds._id %>" class="btn btn-primary"><%= campgrounds.name %></a></th>
+            <th><%= campgrounds.rollno %></th>
+        <th><%= campgrounds.description %></th>
+        </tr>
+    </div>
+    <% });%>                  
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campgrounds){ %>
+        <tr style="color:white;">
+            <th><a href="/campgrounds/<%= campgrounds._id %>" class="btn btn-primary"><%= campgrounds.name %></a></th>
+            <th><%= campgrounds.rollno %></th>
+        <th><%= campgrounds.description %></th>
+        </tr>
+    </div>
+    <% });%>                   -->
+
+
+
+  
+</table>
+
+</body>
+</html>
+
+
+<%- include('../partials/footer'); -%>
